@@ -67,12 +67,12 @@ Config.Schatzsuche10Truhe = vector3(-329.78, -366.10, 87.28)  --- Immer beim let
 Config.Dynamicrewards = true
 
 Config.RewardMoney = 10
-Config.RewardMoneyMin = 5
-Config.RewardMoneyMax = 10
+Config.RewardMoneyMin = 10
+Config.RewardMoneyMax = 20
 
 Config.Randomitems = {
-    'bread',
-    'weed',
-    'water',
+    'lotterielos',
+    'schatzkarte',
+    'lotterielos',
     'schatzkarte'
 }

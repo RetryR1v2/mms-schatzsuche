@@ -30,51 +30,61 @@ function StarteSchatzsuche()
         RSGCore.Functions.Notify('Du hast eine Schatzsuche gestartet.', 'success')
         Citizen.Wait(200)
         prompt = 1
+        lib.showTextUI('Finde die Schatztruhe!')
         Schatzsuche1()
     elseif schatzsucheactive == 2 then
         RSGCore.Functions.Notify('Du hast eine Schatzsuche gestartet.', 'success')
         Citizen.Wait(200)
         prompt = 2
+        lib.showTextUI('Finde die Schatztruhe!')
         Schatzsuche2()
     elseif schatzsucheactive == 3 then
         RSGCore.Functions.Notify('Du hast eine Schatzsuche gestartet.', 'success')
         Citizen.Wait(200)
         prompt = 3
+        lib.showTextUI('Finde die Schatztruhe!')
         Schatzsuche3()
     elseif schatzsucheactive == 4 then
         RSGCore.Functions.Notify('Du hast eine Schatzsuche gestartet.', 'success')
         Citizen.Wait(200)
         prompt = 4
+        lib.showTextUI('Finde die Schatztruhe!')
         Schatzsuche4()
     elseif schatzsucheactive == 5 then
         RSGCore.Functions.Notify('Du hast eine Schatzsuche gestartet.', 'success')
         Citizen.Wait(200)
         prompt = 5
+        lib.showTextUI('Finde die Schatztruhe!')
         Schatzsuche5()
     elseif schatzsucheactive == 6 then
         RSGCore.Functions.Notify('Du hast eine Schatzsuche gestartet.', 'success')
         Citizen.Wait(200)
         prompt = 6
+        lib.showTextUI('Finde die Schatztruhe!')
         Schatzsuche6()
     elseif schatzsucheactive == 7 then
         RSGCore.Functions.Notify('Du hast eine Schatzsuche gestartet.', 'success')
         Citizen.Wait(200)
         prompt = 7
+        lib.showTextUI('Finde die Schatztruhe!')
         Schatzsuche7()
     elseif schatzsucheactive == 8 then
         RSGCore.Functions.Notify('Du hast eine Schatzsuche gestartet.', 'success')
         Citizen.Wait(200)
         prompt = 8
+        lib.showTextUI('Finde die Schatztruhe!')
         Schatzsuche8()
     elseif schatzsucheactive == 9 then
         RSGCore.Functions.Notify('Du hast eine Schatzsuche gestartet.', 'success')
         Citizen.Wait(200)
         prompt = 9
-       -- Schatzsuche9()
+        lib.showTextUI('Finde die Schatztruhe!')
+        Schatzsuche9()
     elseif schatzsucheactive == 10 then
         RSGCore.Functions.Notify('Du hast eine Schatzsuche gestartet.', 'success')
         Citizen.Wait(200)
         prompt = 10
+        lib.showTextUI('Finde die Schatztruhe!')
         Schatzsuche10()
     end
 end
@@ -94,7 +104,6 @@ function Schatzsuche1()
     })
 
 -- Truhe
-
 local hash = GetHashKey('s_re_rcboatbox01x')
         while not HasModelLoaded(hash) do
             Wait(10)
@@ -108,15 +117,17 @@ local hash = GetHashKey('s_re_rcboatbox01x')
                 FreezeEntityPosition(schatztruhe, true)
                 spawnedtruhe = true
         end
-
 -- BLIP
     blipschatzsuche = Citizen.InvokeNative(0x554D9D53F696D002, 1664425300, Config.Schatzsuche1Blip)
     SetBlipSprite(blipschatzsuche, GetHashKey('blip_code_waypoint'), true)
     SetBlipScale(blipschatzsuche, 5.5)
     Citizen.InvokeNative(0x9CB1A1623062F402, blipschatzsuche, Config.SchatzsucheBlip )
 
+    while schatzsucheactive == 1 do
+        Citizen.Wait(0)
+        Citizen.InvokeNative(0x2A32FAA57B937173,0x94FDAE17,Config.Schatzsuche1Truhe+1.0,0,0,0,0,0,0,60.0,60.0,1.5,255,0,0,100,0, 0, 0, 0, 0, 0, 0)
+    end
 end
-
 
 -- Schatzsuche 2
 function Schatzsuche2()
@@ -149,7 +160,10 @@ function Schatzsuche2()
         SetBlipSprite(blipschatzsuche, GetHashKey('blip_code_waypoint'), true)
         SetBlipScale(blipschatzsuche, 5.5)
         Citizen.InvokeNative(0x9CB1A1623062F402, blipschatzsuche, Config.SchatzsucheBlip )
-    
+        while schatzsucheactive == 2 do
+            Citizen.Wait(0)
+            Citizen.InvokeNative(0x2A32FAA57B937173,0x94FDAE17,Config.Schatzsuche2Truhe+1.0,0,0,0,0,0,0,60.0,60.0,1.5,255,0,0,100,0, 0, 0, 0, 0, 0, 0)
+        end
     end
 
 
@@ -184,7 +198,10 @@ function Schatzsuche3()
         SetBlipSprite(blipschatzsuche, GetHashKey('blip_code_waypoint'), true)
         SetBlipScale(blipschatzsuche, 5.5)
         Citizen.InvokeNative(0x9CB1A1623062F402, blipschatzsuche, Config.SchatzsucheBlip )
-    
+        while schatzsucheactive == 3 do
+            Citizen.Wait(0)
+            Citizen.InvokeNative(0x2A32FAA57B937173,0x94FDAE17,Config.Schatzsuche3Truhe+1.0,0,0,0,0,0,0,60.0,60.0,1.5,255,0,0,100,0, 0, 0, 0, 0, 0, 0)
+        end
     end
 
 
@@ -219,7 +236,10 @@ function Schatzsuche4()
         SetBlipSprite(blipschatzsuche, GetHashKey('blip_code_waypoint'), true)
         SetBlipScale(blipschatzsuche, 5.5)
         Citizen.InvokeNative(0x9CB1A1623062F402, blipschatzsuche, Config.SchatzsucheBlip )
-    
+        while schatzsucheactive == 4 do
+            Citizen.Wait(0)
+            Citizen.InvokeNative(0x2A32FAA57B937173,0x94FDAE17,Config.Schatzsuche4Truhe+1.0,0,0,0,0,0,0,60.0,60.0,1.5,255,0,0,100,0, 0, 0, 0, 0, 0, 0)
+        end
     end
 
 
@@ -254,7 +274,10 @@ function Schatzsuche5()
         SetBlipSprite(blipschatzsuche, GetHashKey('blip_code_waypoint'), true)
         SetBlipScale(blipschatzsuche, 5.5)
         Citizen.InvokeNative(0x9CB1A1623062F402, blipschatzsuche, Config.SchatzsucheBlip )
-    
+        while schatzsucheactive == 5 do
+            Citizen.Wait(0)
+            Citizen.InvokeNative(0x2A32FAA57B937173,0x94FDAE17,Config.Schatzsuche5Truhe+1.0,0,0,0,0,0,0,60.0,60.0,1.5,255,0,0,100,0, 0, 0, 0, 0, 0, 0)
+        end
     end
 
 
@@ -289,7 +312,10 @@ function Schatzsuche6()
         SetBlipSprite(blipschatzsuche, GetHashKey('blip_code_waypoint'), true)
         SetBlipScale(blipschatzsuche, 5.5)
         Citizen.InvokeNative(0x9CB1A1623062F402, blipschatzsuche, Config.SchatzsucheBlip )
-    
+        while schatzsucheactive == 6 do
+            Citizen.Wait(0)
+            Citizen.InvokeNative(0x2A32FAA57B937173,0x94FDAE17,Config.Schatzsuche6Truhe+1.0,0,0,0,0,0,0,60.0,60.0,1.5,255,0,0,100,0, 0, 0, 0, 0, 0, 0)
+        end
     end
 
     -- Schatzsuche 7
@@ -323,7 +349,10 @@ function Schatzsuche7()
         SetBlipSprite(blipschatzsuche, GetHashKey('blip_code_waypoint'), true)
         SetBlipScale(blipschatzsuche, 5.5)
         Citizen.InvokeNative(0x9CB1A1623062F402, blipschatzsuche, Config.SchatzsucheBlip )
-    
+        while schatzsucheactive == 7 do
+            Citizen.Wait(0)
+            Citizen.InvokeNative(0x2A32FAA57B937173,0x94FDAE17,Config.Schatzsuche7Truhe+1.0,0,0,0,0,0,0,60.0,60.0,1.5,255,0,0,100,0, 0, 0, 0, 0, 0, 0)
+        end
     end
 
 
@@ -358,7 +387,10 @@ function Schatzsuche8()
         SetBlipSprite(blipschatzsuche, GetHashKey('blip_code_waypoint'), true)
         SetBlipScale(blipschatzsuche, 5.5)
         Citizen.InvokeNative(0x9CB1A1623062F402, blipschatzsuche, Config.SchatzsucheBlip )
-    
+        while schatzsucheactive == 8 do
+            Citizen.Wait(0)
+            Citizen.InvokeNative(0x2A32FAA57B937173,0x94FDAE17,Config.Schatzsuche8Truhe+1.0,0,0,0,0,0,0,60.0,60.0,1.5,255,0,0,100,0, 0, 0, 0, 0, 0, 0)
+        end
     end
 
 
@@ -393,7 +425,10 @@ function Schatzsuche9()
         SetBlipSprite(blipschatzsuche, GetHashKey('blip_code_waypoint'), true)
         SetBlipScale(blipschatzsuche, 5.5)
         Citizen.InvokeNative(0x9CB1A1623062F402, blipschatzsuche, Config.SchatzsucheBlip )
-    
+        while schatzsucheactive == 9 do
+            Citizen.Wait(0)
+            Citizen.InvokeNative(0x2A32FAA57B937173,0x94FDAE17,Config.Schatzsuche9Truhe+1.0,0,0,0,0,0,0,60.0,60.0,1.5,255,0,0,100,0, 0, 0, 0, 0, 0, 0)
+        end
     end
     
     
@@ -429,7 +464,10 @@ function Schatzsuche10()
         SetBlipSprite(blipschatzsuche, GetHashKey('blip_code_waypoint'), true)
         SetBlipScale(blipschatzsuche, 5.5)
         Citizen.InvokeNative(0x9CB1A1623062F402, blipschatzsuche, Config.SchatzsucheBlip )
-    
+        while schatzsucheactive == 10 do
+            Citizen.Wait(0)
+            Citizen.InvokeNative(0x2A32FAA57B937173,0x94FDAE17,Config.Schatzsuche10Truhe+1.0,0,0,0,0,0,0,60.0,60.0,1.5,255,0,0,100,0, 0, 0, 0, 0, 0, 0)
+        end
     end
     
     ----- Schließe die Schatzsuche ab
@@ -501,6 +539,7 @@ function Schatzsuche10()
         DeletePrompts()
         schatzsucheactive = 0
         spawnedtruhe = false
+        lib.hideTextUI()
     end)
 
 
@@ -572,6 +611,7 @@ AddEventHandler("onResourceStop",function (resourceName)
         end
         DeleteObject(schatztruhe)
         DeletePrompts()
+        lib.hideTextUI()
         schatzsucheactive = 0
         spawnedtruhe = false
     end
@@ -584,6 +624,7 @@ AddEventHandler("error",function (resourceName)
         end
         DeleteObject(schatztruhe)
         DeletePrompts()
+        lib.hideTextUI()
         schatzsucheactive = 0
         spawnedtruhe = false
     end
