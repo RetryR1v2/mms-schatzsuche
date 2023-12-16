@@ -1,0 +1,4 @@
+-- mms-schatzsuche
+
+    ['schatzkarte']  = {['name'] = 'schatzkarte',  ['label'] = 'Schatzkarte',  ['weight'] = 0,  ['type'] = 'item', ['image'] = 'schatzkarte.png',  ['unique'] = false, ['useable'] = true,  ['shouldClose'] = true, ['combinable'] = nil, ['level'] = 0, ['description'] = 'Schatzkarte finde die Truhe'},
+    
